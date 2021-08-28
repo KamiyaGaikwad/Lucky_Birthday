@@ -15,8 +15,12 @@
 
   .container {
     width: 300px;
-    margin: auto;
     word-wrap: break-word;
+    margin-right: auto;
+    margin-left: auto;
+    padding: auto;
+    align-content: center;
+    text-align: center;
   }
 
 input,label,#output,button{
@@ -69,34 +73,40 @@ h1 {
 
   a{
       color:white;
-      
   }
 
   .Footer_outer{
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 2rem;
+    padding: 0;
     /* border: 1px solid; */
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: auto;
+    align-content: center;
+    text-align: center;
     }
     
     .Footer_inner_left{
     width: 50%;
     float: left;
     display: block;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     }
     
     .Footer_inner_right{
     width: 50%;
     float: right;
     display: block;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
     }
 
     @media screen and (max-width: 600px) {
+        .container{
+            width: 80%;
+        }
         .Footer_inner_right,.Footer_inner_left {
           width: 100% !important;
           text-align: center;

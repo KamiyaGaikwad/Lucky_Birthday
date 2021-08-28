@@ -1,7 +1,7 @@
 var DoB = document.querySelector("#date-of-birth");
 var luckyNumber = document.querySelector("#lucky-number");
 var checkButton = document.querySelector("#check-button");
-
+var outPut = document.querySelector("#output")
 checkButton.addEventListener('click',takeInputForOperation);
 
 function takeInputForOperation(){
@@ -10,14 +10,18 @@ function takeInputForOperation(){
     // sum = sumTheNumber(bday);
     bday = replaceAllByNullProgram(bday);
     sum = sumTheNumber(bday);
-   
+    if(sum&&luckyNumber.value){
+        compareSumAndLuckyNumber();
+    }
+    else{
+        outPut.innerText = "Please enter both the fields 🧐";
+    }
 }
 
 function sumTheNumber(bday){
     let sum=0;
     for(let i=0;i<bday.length;i++){
         sum = sum + Number(bday.charAt(i));
-        console.log(sum)
     }
     return sum;
 }
@@ -33,12 +37,18 @@ function replaceAllByNullProgram(bday) {
            continue;
         }
     }
-    console.log("y:",y);
     return y;
     
 }
 
-
+function compareSumAndLuckyNumber(){
+    if(sum%luckyNumber.value){
+        outPut.innerText = "Sorry, Your Birthday is Not a Lucky ☹️";
+    }
+    else{
+        outPut.innerText = "Congratulations 🤩, Your Birthday a Lucky";
+    }
+}
 
 
 

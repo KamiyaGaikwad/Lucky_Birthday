@@ -6,9 +6,11 @@ checkButton.addEventListener('click',takeInputForOperation);
 
 function takeInputForOperation(){
     var bday = DoB.value;
-    bday = bday.replaceAll("-","");
+    // bday = bday.replaceAll("-","");
+    // sum = sumTheNumber(bday);
+    bday = replaceAllByNullProgram(bday);
     sum = sumTheNumber(bday);
-    // alert(sum);
+   
 }
 
 function sumTheNumber(bday){
@@ -20,7 +22,21 @@ function sumTheNumber(bday){
     return sum;
 }
 
-
+function replaceAllByNullProgram(bday) {
+    let y="";
+    for(let j=0;j<bday.length;j++){
+        x = bday.charAt(j)
+        if(x!="-"){
+            y = y+x;
+        }
+        else{
+           continue;
+        }
+    }
+    console.log("y:",y);
+    return y;
+    
+}
 
 
 

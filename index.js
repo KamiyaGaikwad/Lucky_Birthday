@@ -43,10 +43,10 @@ function replaceAllByNullProgram(bday) {
 
 function compareSumAndLuckyNumber(){
     if(sum%luckyNumber.value){
-        outPut.innerText = "Sorry, Your Birthday is Not a Lucky ☹️";
+        outPut.innerText = "Sorry, Your Birthday is Not Lucky ☹️";
     }
     else{
-        outPut.innerText = "Congratulations 🤩, Your Birthday a Lucky";
+        outPut.innerText = "Congratulations 🤩, Your Birthday is Lucky";
     }
 }
 

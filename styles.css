@@ -9,11 +9,14 @@
     background-color: var(--primary-dark);
     color: var(--primary-green);
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
   }
 
   .container {
     width: 300px;
     margin: auto;
+    word-wrap: break-word;
   }
 
 input,label,#output,button{
@@ -63,3 +66,46 @@ h1 {
   #date-of-birth{
       padding: 0.5rem;
   }
+
+  a{
+      color:white;
+      
+  }
+
+  .Footer_outer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    /* border: 1px solid; */
+    }
+    
+    .Footer_inner_left{
+    width: 50%;
+    float: left;
+    display: block;
+    padding-top: 2rem;
+    }
+    
+    .Footer_inner_right{
+    width: 50%;
+    float: right;
+    display: block;
+    padding-top: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        .Footer_inner_right,.Footer_inner_left {
+          width: 100% !important;
+          text-align: center;
+          word-wrap: break-word;
+          float: none !important;
+        }
+        .Footer_outer
+        {
+         padding: 0rem;
+        padding-bottom: 2rem;
+        }
+      }
